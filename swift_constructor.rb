@@ -8,8 +8,8 @@ end
 constructPrototype = ""
 constructContent = ""
 read_file(ARGV[0]).scan(/var ((.*):.*)/).each do |match|
-	constructPrototype += match[0] + ", "
-	constructContent += "\tself." + match[1] + " = " + match[1] + "\n"
+  constructPrototype += match[0] + ", "
+  constructContent += "\tself." + match[1] + " = " + match[1] + "\n"
 end
 constructPrototype = constructPrototype[0...-2]
 constructContent = constructContent[0...-1]
